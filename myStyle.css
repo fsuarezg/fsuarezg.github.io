@@ -31,6 +31,9 @@ body {
     padding-bottom: 1em;
     background-color: #F5AA0A;
     position: absolute;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     /*box-shadow: -2px 2px 3px rgba(0,0,0,0.4);*/
 }
@@ -38,7 +41,7 @@ body {
 #navbarContainer  {
     width: 300px;
     position: fixed;
-    z-index: 2;
+    z-index: 100; /*fix on top above carousel*/
     padding-left: 10em;
     left: calc(50% - 150px);
 }
