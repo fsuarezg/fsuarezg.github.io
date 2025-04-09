@@ -3,7 +3,35 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.container-fluid {
+    position: relative;
+    padding-top:50px;
+    height:800px;
+    color: #fff;
+    background-color: #e8e5e0;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-image: url("Images/paper_texture.jpg");
+    background-size: cover;  */
+}
 
+#About{
+    z-index: 5;
+}
+#Resume{
+    top: -50px;
+    z-index: 4;
+}
+#Portfolio{
+    top: -100px;
+    z-index: 3;
+}
+#Contact{
+    top: -150px;
+    z-index: 2;
+}
+    
 
 .frontpagecontainer {
     padding: 12em;
@@ -29,7 +57,7 @@ body {
 .mynavbar {
     padding-top: 3em;
     padding-bottom: 1em;
-    background-color: #F5AA0A;
+    background-color: #e8e5e0;
     position: absolute;
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
