@@ -3,6 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* main containers */
 .container-fluid {
     position: relative;
     padding-top:50px;
@@ -15,7 +16,7 @@ body {
     /* background-image: url("Images/paper_texture.jpg");
     background-size: cover;  */
 }
-
+/* overlap and order containers*/
 #About{
     z-index: 5;
 }
@@ -31,11 +32,6 @@ body {
     top: -150px;
     z-index: 2;
 }
-    
-
-.frontpagecontainer {
-    padding: 12em;
-}
 
 .nameHeader {
     color: #fff;
@@ -49,7 +45,7 @@ body {
     padding-bottom: 2em;
 }
 
-
+/* navigation bar */
 .navbar.transparent.navbar-inverse .navbar-inner {
     background: rgba(0,0,0,0.4);
 }
@@ -62,8 +58,6 @@ body {
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-    /*box-shadow: -2px 2px 3px rgba(0,0,0,0.4);*/
 }
 
 #navbarContainer  {
@@ -140,7 +134,7 @@ li {
 .mybtn {
     width: 150px !important;
     height: 150px !important;
-    border:0px solid transparent; /* this was 1px earlier */
+    border: 0px solid transparent; /* this was 1px earlier */
 }
 
 .glyphicon.glyphicon-file {
@@ -151,46 +145,11 @@ li {
     color: #27588C;
 }
 
-#DownloadButton {
-
-}
-
 #btnText {
     color: #27588C;
 }
-/* for color stripes*/
-.stripesContainer {
-    display:flex;
-    position: absolute;
-    z-index: 1;
-}
-
-.stripe1 {
-    width: 1rem;
-    height: 800px;
-    background-color: #F5AA0A;
-}
-.stripe2 {
-    pad-left: 1rem;
-    width: 1rem;
-    height: 800px;
-    background-color: #EB8B11;
-}
-.stripe3 {
-    pad-left: 2rem;
-    width: 1rem;
-    height: 800px;
-    background-color: #AE354C;
-}
-.stripe4 {
-    pad-left: 3rem;
-    width: 1rem;
-    height: 800px;
-    background-color: #27588C;
-}
 
 /* for resume section */
-
 .resumeContainer {
     display: flex;
     align-items: center;
