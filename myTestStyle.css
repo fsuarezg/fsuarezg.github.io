@@ -13,10 +13,10 @@ body {
     padding-top:50px;
     height:800px;
     color: #fff;
-    background-color: #e8e5e0;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #dcd5ca;
     background-image: url("images_resources/paper_texture.jpg");
     background-size: cover; 
     border-bottom: 1.5px solid #bcb7ae;
