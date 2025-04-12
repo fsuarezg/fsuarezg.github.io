@@ -38,6 +38,10 @@ body {
     z-index: 2;
 }
 
+.img-circle{
+    border-top: 2px solid #bcb7ae;
+}
+
 .nameHeader {
     color: var(--text-color);
     font-weight: 100;
