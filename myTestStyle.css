@@ -21,6 +21,13 @@ body {
     background-size: cover; 
     border-bottom: 1.5px solid #bcb7ae;
 }
+/*position pages background differently so pages don't look the same*/
+.container-fluid:nth-of-type(even){
+    background-position: top; 
+}
+.container-fluid:nth-of-type(odd){
+    background-position: bottom; 
+}
 /* overlap and order containers*/
 #About{
     z-index: 5;
