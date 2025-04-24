@@ -155,24 +155,7 @@ li {
 .contactcontainer {
     width: 350px;
 }
-/* for download button */
-.mybtn {
-    width: 150px !important;
-    height: 150px !important;
-    border: 0px solid transparent; /* this was 1px earlier */
-}
 
-.glyphicon.glyphicon-file {
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 2rem;
-    font-size: 75px;
-    color: #27588C;
-}
-
-#btnText {
-    color: #27588C;
-}
 
 /* for resume section */
 .resumeContainer {
@@ -288,3 +271,54 @@ to {
     height: 90%;
     width: 40%;
 }
+
+/* for download button */
+.glyphicon.glyphicon-file {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 2rem;
+    font-size: 75px;
+    color: #27588C;
+}
+
+.postit {
+    width: 160px;
+    display: block;
+    height: 160px;
+    position: relative;
+    border-radius: 3px;
+    background: linear-gradient(to right, #e19c48 35%, #efb86c 100%);
+    margin-bottom: 40px;
+    padding: 15px 25px 0 40px;
+    color: darkslategray;
+    box-shadow: 1px 2px 1px -1px #777;
+    transition: background 200ms ease-in-out;
+  }
+  
+  .shadow {
+    position: relative;
+  }
+  .shadow:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    right: 7px;
+    width: 25%;
+    top: 0;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(4deg);
+    transition: all 150ms ease-in-out;
+  }
+  
+  .postit:hover {
+    background: linear-gradient(to right, #e19c48 0%, #e19c48 100%);
+  }
+  
+  .shadow:hover::before {
+    transform: rotate(0deg);
+    bottom: 20px;
+    z-index: -10;
+  }
+  
+  
