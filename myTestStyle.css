@@ -264,27 +264,36 @@ to {
     }
   }
 
-.sketch{
-    position: relative;
-    z-index: 5;
-    mix-blend-mode: multiply;
-    height: 90%;
-    width: 40%;
-}
-
 /* for download button */
 .glyphicon.glyphicon-file {
     padding-top: 1rem;
-    padding-left: 1rem;
     padding-bottom: 2rem;
     font-size: 75px;
-    color: #27588C;
+    color: darkslategray;
 }
 
+.paperoverlay{
+    background-image: url(images_resources/paper_texture.jpg);
+    background-size: cover; 
+    mix-blend-mode: multiply;
+}
+
+a:hover {
+    text-decoration: none;
+  }
+  
+a:active {
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+  
 .postit {
-    width: 160px;
+    width: 170px;
     display: block;
-    height: 160px;
+    height: 170px;
     position: relative;
     border-radius: 3px;
     background: linear-gradient(to right, #e19c48 35%, #efb86c 100%);
@@ -293,32 +302,35 @@ to {
     color: darkslategray;
     box-shadow: 1px 2px 1px -1px #777;
     transition: background 200ms ease-in-out;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
   }
   
-  .shadow {
-    position: relative;
-  }
-  .shadow:before {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    bottom: 13px;
-    right: 7px;
-    width: 25%;
-    top: 0;
-    box-shadow: 0 15px 10px #777;
-    transform: rotate(4deg);
-    transition: all 150ms ease-in-out;
-  }
-  
-  .postit:hover {
-    background: linear-gradient(to right, #e19c48 0%, #e19c48 100%);
-  }
-  
-  .shadow:hover::before {
-    transform: rotate(0deg);
-    bottom: 20px;
-    z-index: -10;
-  }
+.shadow {
+position: relative;
+}
+.shadow:before {
+z-index: -1;
+position: absolute;
+content: "";
+bottom: 13px;
+right: 7px;
+width: 25%;
+top: 0;
+box-shadow: 0 15px 10px #777;
+transform: rotate(4deg);
+transition: all 150ms ease-in-out;
+}
+
+.postit:hover {
+background: linear-gradient(to right, #e19c48 0%, #e19c48 100%);
+}
+
+.shadow:hover::before {
+transform: rotate(0deg);
+bottom: 20px;
+z-index: -10;
+}
   
   
