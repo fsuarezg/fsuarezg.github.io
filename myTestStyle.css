@@ -32,6 +32,10 @@ body {
 /* overlap and order containers*/
 #About{
     z-index: 5;
+    background-image:  url("images_resources/sketch_01.png"), url("images_resources/paper_texture.jpg");
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    background-size: 35%, cover; 
 }
 #Resume{
     top: -50px;
@@ -46,8 +50,11 @@ body {
     z-index: 2;
 }
 
-.img-circle{
+.imageCircle{
     border-top: 2px solid #bcb7ae;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
 }
 
 .nameHeader {
