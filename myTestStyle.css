@@ -41,7 +41,7 @@ body {
     background-image:  url("images_resources/sketch_02.png"), url("images_resources/paper_texture.jpg");
     background-position: left bottom, bottom;
     background-repeat: no-repeat, repeat;
-    background-size: 35%, cover; 
+    background-size: 37%, cover; 
     top: -50px;
     z-index: 4;
 }
