@@ -32,12 +32,16 @@ body {
 /* overlap and order containers*/
 #About{
     z-index: 5;
-    background-image:  url("images_resources/sketch_01.png"), url("images_resources/paper_texture.jpg");
-    background-position: right bottom, left top;
+    background-image: url("images_resources/sketch_01.png"), url("images_resources/paper_texture.jpg");
+    background-position: right bottom, top;
     background-repeat: no-repeat, repeat;
     background-size: 35%, cover; 
 }
 #Resume{
+    background-image:  url("images_resources/sketch_02.png"), url("images_resources/paper_texture.jpg");
+    background-position: left bottom, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: 35%, cover; 
     top: -50px;
     z-index: 4;
 }
@@ -280,14 +284,17 @@ to {
 
 a:hover {
     text-decoration: none;
+    color: darkslategray;
   }
   
 a:active {
     text-decoration: none;
+    color: darkslategray;
 }
 
 a:focus {
     text-decoration: none;
+    color: darkslategray;
 }
   
 .postit {
