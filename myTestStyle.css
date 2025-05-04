@@ -83,9 +83,8 @@ body {
 }
 
 .mynavbar {
-    padding-top: 3em;
     padding-bottom: 1em;
-    background-color: var(--text-color); /*#e8e5e0;*/
+    background-color: #4b352a;
     background: url("images_resources/leather.jpg");
     background-size: 150%;
     position: absolute;
@@ -93,6 +92,12 @@ body {
     border-bottom-left-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-bottom: 2.5px solid #221c18;
+}
+
+.mynavbarStitch {
+    text-shadow: -0.5px -0.5px rgba(0,0,0,0.5), 0.5px 0.5px rgba(154, 131, 119, 0.5);
+    color: rgba(0,0,0,0.5);
+    padding-bottom: 1em; 
 }
 
 #navbarContainer  {
@@ -105,10 +110,10 @@ body {
 
 .nav-link {
     padding: .30rem 0;
-    font-family: "Roboto Serif";
+    font-family: "Roboto Serif" ;
     font-weight: 400;
-    font-style: normal;
-    text-shadow: -1px -1px rgba(0,0,0,0.5), 1px 1px rgba(154, 131, 119, 0.5);
+    font-style: bold;
+    text-shadow: -0.5px -0.5px rgba(0,0,0,0.5), 0.5px 0.5px rgba(154, 131, 119, 0.5);
     color: rgba(0,0,0,0.5);
     background-color: transparent;
     border-bottom: .25rem solid transparent;
