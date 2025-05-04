@@ -50,6 +50,10 @@ body {
     z-index: 3;
 }
 #Contact{
+    background-image:  url("images_resources/fish.png"), url("images_resources/paper_texture.jpg");
+    background-position: bottom, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: 90%, cover; 
     top: -150px;
     z-index: 2;
 }
@@ -162,19 +166,19 @@ li {
 
 
 /* for resume section */
-.resumeContainer {
+.horizontalContainer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .intermediateContainer {
-    width: 500px;
+    width: 600px;
     height: auto;
 }
 
 .leftContainer {
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
