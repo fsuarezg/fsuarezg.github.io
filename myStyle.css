@@ -95,7 +95,9 @@ body {
 }
 
 .mynavbarStitch {
-    text-shadow: -0.5px -0.5px rgba(0,0,0,0.5), 0.5px 0.5px rgba(154, 131, 119, 0.5);
+    text-shadow:
+        -0.5px -0.5px 0.5px rgba(0,0,0,0.5),
+        0.5px 0.5px 0.5px rgba(154, 131, 119, 0.5);
     color: rgba(0,0,0,0.5);
     padding-bottom: 1em; 
 }
@@ -110,12 +112,16 @@ body {
 
 .nav-link {
     padding: .30rem 0;
-    font-family: "Roboto Serif" ;
+
+    font-family: "Coustard", serif;
+    font-weight: 400;
     font-size: smaller;
-    font-weight: 300;
-    font-style: bold;
-    text-shadow: -0.5px -0.5px rgba(0,0,0,0.5), 0.5px 0.5px rgba(154, 131, 119, 0.7);
+    font-style: normal;
+   
     color: rgba(0,0,0,0.5);
+    text-shadow:
+        -0.5px -0.5px 0.5px rgba(0,0,0,0.5),
+        0.5px 0.5px 0.5px rgba(154, 131, 119, 0.7);
     background-color: transparent;
     border-bottom: .25rem solid transparent;
     text-underline-offset: 8px;
