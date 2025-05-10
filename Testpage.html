@@ -43,7 +43,18 @@
             <h1 class="pageTitle">About</h1>
             <div class="horizontalContainer">
                 <div class="intermediateContainer" style="padding-right: 5%;"> 
-                    <img src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle">
+                    <picture>
+                        <!-- User prefers light mode: -->
+                        <source srcset="images_resources/ID_Photo_01.jpg" media="(prefers-color-scheme: light)"/>
+                      
+                        <!-- User prefers dark mode: -->
+                        <source srcset="images_resources/ID_Photo_01_dark.jpg"  media="(prefers-color-scheme: dark)"/>
+                      
+                        <!-- User has no color preference: -->
+                        <img src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle">
+                      </picture>
+                      
+                    <!-- <img src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle"> -->
                     <h2 class="nameHeader">Fernando<b>SuárezGroen</b></h2>
                     <h3 class="nameHeader">
                         As both a <b>Software Engineer</b> and an <b>Artist</b> I strive to bridge the worlds of art and technology</b>.
