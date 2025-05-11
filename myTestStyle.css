@@ -43,8 +43,6 @@ body {
     :root {
         --text-color: #21222a;
         --text-color-light: #46575e;
-        /* --text-color: #707f85;
-        --text-color-light: #b2c6cf; */
         --paper-texture: url("images_resources/paper_texture_dark.jpg");
         --paper-shadow: 0em 50px 100px -5px rgba(254, 238, 190, 0.3),
                         0em 0em 2em 0em #8b5d29,
