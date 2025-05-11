@@ -32,6 +32,7 @@ body {
         --frosted-glass-background: rgba(255, 255, 255, 0.15);
         --frosted-glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);   
         --frosted-glass-border: 1.5px solid rgba(149, 149, 149, 0.5);    
+        --fishes-image: url("images_resources/fish.png")
       }
 }
 
@@ -69,6 +70,7 @@ body {
         --frosted-glass-background: radial-gradient(rgb(177, 135, 71, 0.8) , rgb(161, 109, 74, 0.8), transparent);
         --frosted-glass-shadow: 0em 0em 3em 0em rgb(166, 116, 60, 0.5);
         --frosted-glass-border: 1.5px solid rgba(199, 146, 85, 0.5);
+        --fishes-image: url("images_resources/fish_dark.png")
       }
 }
 
@@ -115,7 +117,7 @@ body {
     z-index: 3;
 }
 #Contact{
-    background-image:  url("images_resources/fish.png"), var(--paper-texture);
+    background-image:  var(--fishes-image), var(--paper-texture);
     background-position: bottom, bottom;
     background-repeat: no-repeat, repeat;
     background-size: 90%, cover; 
