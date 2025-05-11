@@ -29,6 +29,9 @@ body {
         --navbar-text-color: rgba(0,0,0,0.5);
         --navbar-text-shadow:  -0.5px -0.5px 0.5px rgba(0,0,0,0.5),
                                0.5px 0.5px 0.5px rgba(154, 131, 119, 0.7);
+        --frosted-glass-background: rgba(255, 255, 255, 0.15);
+        --frosted-glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);   
+        --frosted-glass-border: 1.5px solid rgba(149, 149, 149, 0.5);    
       }
 }
 
@@ -59,12 +62,15 @@ body {
                          0em 0em 50em 0em #82571f;
         --postit-text-color: rgb(24, 31, 31);
         --id-shadow: 0em -0.5em 50px -5px rgba(254, 238, 190, 0.5),
-                     0em -1em 2em 0em #957046,
-                     0em -1em 50em 0em #87673e;
+                     0em -1em 2em 0em rgb(149, 112, 70, 0.5),
+                     0em -1em 50em 0em rgb(135, 103, 62, 0.5);
         --id-border: 1.5px solid #bcb7ae;
         --navbar-text-color: #d4ad81; 
         --navbar-text-shadow:  -0.5px -0.5px 3px #b18747,
                                0.5px 0.5px 0.5px rgba(154, 131, 119, 0.7);
+        --frosted-glass-background: radial-gradient(rgb(177, 135, 71, 0.8) , rgb(161, 109, 74, 0.8), transparent);
+        --frosted-glass-shadow: 0em 0em 3em 0em rgb(166, 116, 60, 0.5);
+        --frosted-glass-border: 1.5px solid rgba(199, 146, 85, 0.5);
       }
 }
 
@@ -122,8 +128,8 @@ body {
 .imageCircle{
     border-top: var(--id-border);
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     box-shadow: var(--id-shadow);
 }
 
@@ -174,12 +180,10 @@ body {
 
 .nav-link {
     padding: .30rem 0;
-
     font-family: "Coustard", serif;
     font-weight: 400;
     font-size: smaller;
     font-style: normal;
-   
     color: var(--navbar-text-color);
     text-shadow: var(--navbar-text-shadow);
     background-color: transparent;
@@ -415,4 +419,12 @@ bottom: 20px;
 z-index: -10;
 }
   
-  
+.frostedGlass{
+    border-radius: 1.5em;
+    background: var(--frosted-glass-background);
+    box-shadow: var(--frosted-glass-shadow);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    padding: 0.2em;
+    border-bottom: var(--frosted-glass-border);
+} 
