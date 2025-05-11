@@ -3,6 +3,10 @@ body {
     background-color: var(--background-color);
 }
 
+:root{
+    transition: all 0.5s linear;
+}
+
 .light-mode{
     --text-color: #2A363B;
     --text-color-light: #46575e;
@@ -27,7 +31,8 @@ body {
     --frosted-glass-background: rgba(255, 255, 255, 0.15);
     --frosted-glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);   
     --frosted-glass-border: 1.5px solid rgba(149, 149, 149, 0.5);    
-    --fishes-image: url("images_resources/fish.png")
+    --fishes-image: url("images_resources/fish.png");
+    transition: all 0.5s linear;
 }
 
 .dark-mode{
@@ -60,29 +65,9 @@ body {
     --frosted-glass-background: radial-gradient(rgb(177, 135, 71, 0.8) , rgb(161, 109, 74, 0.8), transparent);
     --frosted-glass-shadow: 0em 0em 3em 0em rgb(166, 116, 60, 0.5);
     --frosted-glass-border: 1.5px solid rgba(199, 146, 85, 0.5);
-    --fishes-image: url("images_resources/fish_dark.png")
+    --fishes-image: url("images_resources/fish_dark.png");
+    transition: all 0.5s linear;
 }
-
-/* Light mode */
-/* @media (prefers-color-scheme: light) {
-    body {
-        background-color: #2A363B;
-    }
-    :root {
-       
-    }
-} */
-
-/* Dark mode */
-/* @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #21222a;
-    }
-    :root {
-        
-    }
-} */
-
 
 /* main containers */
 .container-fluid {
@@ -97,6 +82,9 @@ body {
     background-image: var(--paper-texture);
     background-size: cover; 
     border-bottom: var(--paper-border);
+    transition: box-shadow 0.5s linear,
+                background-image 0.5s linear,
+                border-bottom 0.5s linear;
 }
 /*position pages background differently so pages don't look the same*/
 .container-fluid:nth-of-type(even){
@@ -140,11 +128,14 @@ body {
     width: 180px;
     height: 180px;
     box-shadow: var(--id-shadow);
+    transition: border-top 0.5s linear,
+                box-shadow 0.5s linear;
 }
 
 .nameHeader {
     color: var(--text-color);
     font-weight: 100;
+    transition: color 0.5s linear;
 }
 
 .pageTitle {
@@ -152,6 +143,7 @@ body {
     font-weight: 100;
     padding-top: 1em;
     padding-bottom: 2em;
+    transition: color 0.5s linear;
 }
 
 /* navigation bar */
@@ -169,6 +161,9 @@ body {
     border-bottom-left-radius: 25px;
     box-shadow: var(--leather-shadow);
     border-bottom: var(--leather-border);
+    transition: box-shadow 0.5s linear,
+                background 0.5s linear,
+                border-bottom 0.5s linear;
 }
 
 .mynavbarStitch {
@@ -198,7 +193,8 @@ body {
     background-color: transparent;
     border-bottom: .25rem solid transparent;
     text-underline-offset: 8px;
-
+    transition: color 0.5s linear,
+                text-shadow 0.5s linear;
 }
 
 .nav-link:hover {
@@ -223,6 +219,7 @@ body {
 /* for contact list*/
 .glyphicon {
     color: var(--text-color);
+    transition: color 0.5s linear;
 }
 
 .details li {
@@ -231,6 +228,7 @@ body {
 li {
     margin-bottom:10px;
     color: var(--text-color);
+    transition: color 0.5s linear;
 }
 
 /* for linkedin icon*/
@@ -278,6 +276,7 @@ li {
     width: 2px;
     height: 300px;
     background-color: var(--text-color);
+    transition: background-color 0.5s linear;
 }
 
 .leftContainer ul {
@@ -286,10 +285,6 @@ li {
 
 .leftContainer li {
     list-style: none;
-}
-li {
-    margin-bottom:10px;
-    color: var(--text-color);
 }
 
 /* for light effect */
@@ -362,12 +357,7 @@ to {
     padding-bottom: 2rem;
     font-size: 75px;
     color: var(--postit-text-color);
-}
-
-.paperoverlay{
-    background-image: var(--paper-texture);
-    background-size: cover; 
-    mix-blend-mode: multiply;
+    transition: color 0.5s linear;
 }
 
 a:hover {
@@ -396,36 +386,37 @@ a:focus {
     padding: 15px 25px 0 40px;
     color: var(--postit-text-color);
     box-shadow: var(--postit-shadow);
-    transition: background 200ms ease-in-out;
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-style: normal;
+    transition: background 200ms ease-in-out,
+                box-shadow 0.5s linear;
   }
   
 .shadow {
-position: relative;
+    position: relative;
 }
 .shadow:before {
-z-index: -1;
-position: absolute;
-content: "";
-bottom: 13px;
-right: 7px;
-width: 25%;
-top: 0;
-box-shadow: 0 15px 10px #777;
-transform: rotate(4deg);
-transition: all 150ms ease-in-out;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 13px;
+    right: 7px;
+    width: 25%;
+    top: 0;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(4deg);
+    transition: all 150ms ease-in-out;
 }
 
 .postit:hover {
-background: var(--postit-hover);
+    background: var(--postit-hover);
 }
 
 .shadow:hover::before {
-transform: rotate(0deg);
-bottom: 20px;
-z-index: -10;
+    transform: rotate(0deg);
+    bottom: 20px;
+    z-index: -10;
 }
   
 .frostedGlass{
@@ -436,6 +427,9 @@ z-index: -10;
     -webkit-backdrop-filter: blur(2px);
     padding: 0.2em;
     border-bottom: var(--frosted-glass-border);
+    transition: background 0.5s linear,
+                box-shadow 0.5s linear,
+                border-bottom 0.5s linear;
 } 
 
 /* Toggle */
@@ -450,47 +444,46 @@ z-index: -10;
   }
 
 .toggle-checkbox {
--webkit-appearance: none;
-appearance: none;
-position: absolute;
-z-index: 1;
-border-radius: inherit;
-width: 100%;
-height: 100%;
-opacity: 0;
-cursor: pointer;
-
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 1;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .toggle-container {
-display: flex;
-align-items: center;
-position: relative;
-border-radius: 0.5em;
-width: 2em;
-height: 1em;
-background-image: radial-gradient(#aeaeae, #646464 );
-border-top: 2px solid #221c18;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 0.5em;
+    width: 2em;
+    height: 1em;
+    background-image: radial-gradient(#aeaeae, #646464 );
+    border-top: 2px solid #221c18;
 
-.toggle-checkbox:checked + & {
-    background-image: radial-gradient(#d4a867, #a16d4a );
-}
+    .toggle-checkbox:checked + & {
+        background-image: radial-gradient(#d4a867, #a16d4a );
+    }
 }
 
 .toggle-button {
-display: flex;
-justify-content: center;
-align-items: center;
-position: absolute;
-left: .08em;
-border-radius: .4em;
-width: 0.8em;
-height: 0.8em;
-background-color: #e4ddcf;
-transition: left .4s cubic-bezier(.65, 1.35, .5, 1);
-border-bottom: 1px solid #a49f96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: .08em;
+    border-radius: .4em;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: #e4ddcf;
+    transition: left .4s cubic-bezier(.65, 1.35, .5, 1);
+    border-bottom: 1px solid #a49f96;
 
-.toggle-checkbox:checked + .toggle-container > & {
-    left: 1.12em;
-}
+    .toggle-checkbox:checked + .toggle-container > & {
+        left: 1.12em;
+    }
 }
