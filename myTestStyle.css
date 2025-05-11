@@ -1,78 +1,87 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
 }
 
+.light-mode{
+    --text-color: #2A363B;
+    --text-color-light: #46575e;
+    --background-color: #2A363B;
+    --paper-texture: url("images_resources/paper_texture.jpg");
+    --paper-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --paper-border: 1.5px solid #bcb7ae;
+    --leather-texture: url("images_resources/leather.jpg");
+    --leather-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    --leather-border: 2.5px solid #221c18;
+    --postit-background: linear-gradient(to right, #e19c48 35%, #efb86c 100%);
+    --postit-hover: linear-gradient(to right, #e19c48 0%, #e19c48 100%);
+    --postit-shadow: 1px 2px 1px -1px #777;
+    --postit-text-color: darkslategray;
+    --id-shadow: None;
+    --id-border: 1.5px solid #bcb7ae;
+    --navbar-text-color: rgba(0,0,0,0.5);
+    --navbar-text-shadow:  -0.5px -0.5px 0.5px rgba(0,0,0,0.5),
+                           0.5px 0.5px 0.5px rgba(154, 131, 119, 0.7);
+    --frosted-glass-background: rgba(255, 255, 255, 0.15);
+    --frosted-glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);   
+    --frosted-glass-border: 1.5px solid rgba(149, 149, 149, 0.5);    
+    --fishes-image: url("images_resources/fish.png")
+}
 
+.dark-mode{
+    --text-color: #21222a;
+    --text-color-light: #46575e;
+    --background-color: #21222a;
+    --paper-texture: url("images_resources/paper_texture_dark.jpg");
+    --paper-shadow: 0em 50px 100px -5px rgba(254, 238, 190, 0.3),
+                    0em 0em 2em 0em #8b5d29,
+                    0em 0em 50em 0em #82571f;
+    --paper-border: 1.5px solid #454350;
+    --leather-texture: url("images_resources/leather_dark.jpg");
+    --leather-shadow: 0em 10px 30px -5px rgba(254, 238, 190, 0.3),
+                        0em 0em 1em 0em #8b5d29,
+                        0em 0em 10em 0em #82571f;
+    --leather-border: 2.5px solid #3d2f21;
+    --postit-background: radial-gradient(#b18747, #a16d4a 10%, transparent), linear-gradient(to right, #5e492f 35%, #4d453c 100%);
+    --postit-hover: radial-gradient(#b18747, #a16d4a 10%, transparent), linear-gradient(to right, #5e492f 0%, #5e492f 100%);
+    --postit-shadow: 0em 50px 100px -5px rgba(254, 238, 190, 0.3),
+                        0em 0em 2em 0em #8b5d29,
+                        0em 0em 50em 0em #82571f;
+    --postit-text-color: rgb(24, 31, 31);
+    --id-shadow: 0em -0.5em 50px -5px rgba(254, 238, 190, 0.5),
+                    0em -1em 2em 0em rgb(149, 112, 70, 0.5),
+                    0em -1em 50em 0em rgb(135, 103, 62, 0.5);
+    --id-border: 1.5px solid #bcb7ae;
+    --navbar-text-color: #d4ad81; 
+    --navbar-text-shadow:  -0.5px -0.5px 3px #b18747,
+                            0.5px 0.5px 0.5px rgba(154, 131, 119, 0.7);
+    --frosted-glass-background: radial-gradient(rgb(177, 135, 71, 0.8) , rgb(161, 109, 74, 0.8), transparent);
+    --frosted-glass-shadow: 0em 0em 3em 0em rgb(166, 116, 60, 0.5);
+    --frosted-glass-border: 1.5px solid rgba(199, 146, 85, 0.5);
+    --fishes-image: url("images_resources/fish_dark.png")
+}
 
 /* Light mode */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     body {
         background-color: #2A363B;
     }
     :root {
-        --text-color: #2A363B;
-        --text-color-light: #46575e;
-        --paper-texture: url("images_resources/paper_texture.jpg");
-        --paper-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        --paper-border: 1.5px solid #bcb7ae;
-        --leather-texture: url("images_resources/leather.jpg");
-        --leather-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-                          0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        --leather-border: 2.5px solid #221c18;
-        --postit-background: linear-gradient(to right, #e19c48 35%, #efb86c 100%);
-        --postit-hover: linear-gradient(to right, #e19c48 0%, #e19c48 100%);
-        --postit-shadow: 1px 2px 1px -1px #777;
-        --postit-text-color: darkslategray;
-        --id-shadow: None;
-        --id-border: 1.5px solid #bcb7ae;
-        --navbar-text-color: rgba(0,0,0,0.5);
-        --navbar-text-shadow:  -0.5px -0.5px 0.5px rgba(0,0,0,0.5),
-                               0.5px 0.5px 0.5px rgba(154, 131, 119, 0.7);
-        --frosted-glass-background: rgba(255, 255, 255, 0.15);
-        --frosted-glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);   
-        --frosted-glass-border: 1.5px solid rgba(149, 149, 149, 0.5);    
-        --fishes-image: url("images_resources/fish.png")
-      }
-}
+       
+    }
+} */
 
 /* Dark mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
         background-color: #21222a;
     }
     :root {
-        --text-color: #21222a;
-        --text-color-light: #46575e;
-        --paper-texture: url("images_resources/paper_texture_dark.jpg");
-        --paper-shadow: 0em 50px 100px -5px rgba(254, 238, 190, 0.3),
-                        0em 0em 2em 0em #8b5d29,
-                        0em 0em 50em 0em #82571f;
-        --paper-border: 1.5px solid #454350;
-        --leather-texture: url("images_resources/leather_dark.jpg");
-        --leather-shadow: 0em 10px 30px -5px rgba(254, 238, 190, 0.3),
-                          0em 0em 1em 0em #8b5d29,
-                          0em 0em 10em 0em #82571f;
-        --leather-border: 2.5px solid #3d2f21;
-        --postit-background: radial-gradient(#b18747, #a16d4a 10%, transparent), linear-gradient(to right, #5e492f 35%, #4d453c 100%);
-        --postit-hover: radial-gradient(#b18747, #a16d4a 10%, transparent), linear-gradient(to right, #5e492f 0%, #5e492f 100%);
-        --postit-shadow: 0em 50px 100px -5px rgba(254, 238, 190, 0.3),
-                         0em 0em 2em 0em #8b5d29,
-                         0em 0em 50em 0em #82571f;
-        --postit-text-color: rgb(24, 31, 31);
-        --id-shadow: 0em -0.5em 50px -5px rgba(254, 238, 190, 0.5),
-                     0em -1em 2em 0em rgb(149, 112, 70, 0.5),
-                     0em -1em 50em 0em rgb(135, 103, 62, 0.5);
-        --id-border: 1.5px solid #bcb7ae;
-        --navbar-text-color: #d4ad81; 
-        --navbar-text-shadow:  -0.5px -0.5px 3px #b18747,
-                               0.5px 0.5px 0.5px rgba(154, 131, 119, 0.7);
-        --frosted-glass-background: radial-gradient(rgb(177, 135, 71, 0.8) , rgb(161, 109, 74, 0.8), transparent);
-        --frosted-glass-shadow: 0em 0em 3em 0em rgb(166, 116, 60, 0.5);
-        --frosted-glass-border: 1.5px solid rgba(199, 146, 85, 0.5);
-        --fishes-image: url("images_resources/fish_dark.png")
-      }
-}
+        
+    }
+} */
 
 
 /* main containers */
@@ -167,11 +176,11 @@ body {
         -0.5px -0.5px 0.5px rgba(0,0,0,0.5),
         0.5px 0.5px 0.5px rgba(154, 131, 119, 0.5);
     color: rgba(0,0,0,0.5);
-    padding-bottom: 1em; 
+    /* padding-bottom: 1em;  */
 }
 
 #navbarContainer  {
-    width: 320px;
+    width: 350px;
     position: fixed;
     z-index: 100; /*fix on top above carousel*/
     padding-left: 10em;
@@ -428,3 +437,60 @@ z-index: -10;
     padding: 0.2em;
     border-bottom: var(--frosted-glass-border);
 } 
+
+/* Toggle */
+.toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: .5em;
+    padding: .125em;
+    /* background-image: linear-gradient(to bottom, #d0c4b8, #f5ece5); */
+  }
+
+.toggle-checkbox {
+-webkit-appearance: none;
+appearance: none;
+position: absolute;
+z-index: 1;
+border-radius: inherit;
+width: 100%;
+height: 100%;
+opacity: 0;
+cursor: pointer;
+
+}
+
+.toggle-container {
+display: flex;
+align-items: center;
+position: relative;
+border-radius: 0.5em;
+width: 2em;
+height: 1em;
+background-image: radial-gradient(#aeaeae, #646464 );
+border-top: 2px solid #221c18;
+
+.toggle-checkbox:checked + & {
+    background-image: radial-gradient(#d4a867, #a16d4a );
+}
+}
+
+.toggle-button {
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+left: .08em;
+border-radius: .4em;
+width: 0.8em;
+height: 0.8em;
+background-color: #e4ddcf;
+transition: left .4s cubic-bezier(.65, 1.35, .5, 1);
+border-bottom: 1px solid #a49f96;
+
+.toggle-checkbox:checked + .toggle-container > & {
+    left: 1.12em;
+}
+}

@@ -23,14 +23,19 @@
 <div align="center" id="navbarContainer" >
     <nav class="mynavbar navbar-fixed-top" id="myNavbar">
         <p class="mynavbarStitch">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+        <div class="toggle-wrapper">
+            <input class="toggle-checkbox" type="checkbox" onclick="toggleTheme()" id="ThemeToggle">
+            <div class="toggle-container">  
+                <div class="toggle-button">
+                </div>
+            </div>
+            </div>
         <a class="nav-link" href="#About" id="AboutNav">ABOUT</a>
         <a class="nav-link" href="#Resume" id="ResumeNav">RESUME</a>
         <a class="nav-link" href="#Portfolio" id="PortfolioNav">PORTFOLIO</a>
         <a class="nav-link" href="#Contact" id="ContactNav">CONTACT</a>
     </nav>
 </div>
-
-
 
 <div id="About" class="container-fluid" align="center">
     <div class="backdrop">
@@ -43,14 +48,7 @@
             <h1 class="pageTitle">About</h1>
             <div class="horizontalContainer">
                 <div class="intermediateContainer" style="padding-right: 4em;"> 
-                    <picture>
-                        <!-- User prefers light mode: -->
-                        <source srcset="images_resources/ID_Photo_01.jpg" media="(prefers-color-scheme: light)"/>
-                        <!-- User prefers dark mode: -->
-                        <source srcset="images_resources/ID_Photo_01_dark.jpg"  media="(prefers-color-scheme: dark)"/>
-                        <!-- User has no color preference: -->
-                        <img src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle">
-                      </picture>
+                    <img id="IdImg" src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle">
                     <!-- <img src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle"> -->
                     <h1>  </h1>
                     <div class="frostedGlass" style="padding-right: 1em; padding-left: 1em;">
@@ -251,6 +249,62 @@
             }  // End if
         });
     });
+
+    const themeToggle = document.getElementById("ThemeToggle");
+    const defaultImg = document.getElementById("IdImg");
+    const body = document.body;
+
+    // Check for saved theme preference in localStorage
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+    } else {
+        body.classList.add("light-mode"); // Default theme
+    }
+    console.log(currentTheme)
+
+    // Apply correct image on page load
+    if (currentTheme === "light-mode") {
+        themeToggle.checked=0;
+        defaultImg.src = "images_resources/ID_Photo_01.jpg";
+    } else {
+        themeToggle.checked=1;
+        defaultImg.src = "images_resources/ID_Photo_01_dark.jpg";
+    }
+
+    function toggleTheme() {
+        if (body.classList.contains("light-mode")) {
+            body.classList.remove("light-mode");
+            body.classList.add("dark-mode");
+            defaultImg.src = "images_resources/ID_Photo_01_dark.jpg";
+            localStorage.setItem("theme", "dark-mode");
+        } else {
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            defaultImg.src = "images_resources/ID_Photo_01.jpg";
+            localStorage.setItem("theme", "light-mode");
+        }
+    }
+    // function toggleTheme() {
+    //     var element = document.body;
+    //     element.classList.toggle("dark-mode");
+    // }
+    // function toggleTheme() {
+    //     const currentTheme = document.documentElement.getAttribute("data-theme");
+    //     const newTheme = currentTheme === "dark" ? "light" : "dark";
+    //     console.log(newTheme);
+    //     document.documentElement.setAttribute("data-theme", newTheme);
+    //     localStorage.setItem("theme", newTheme);
+    // }
+
+    // // Apply the saved theme on page load
+    // const savedTheme = localStorage.getItem("theme") || 
+    //     (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    // document.documentElement.setAttribute("data-theme", savedTheme);
+
+    // document.getElementById("toggle_dark_mode").addEventListener("click", toggleTheme);
+</script>
 </script>
 
 </body>
