@@ -82,7 +82,7 @@ body {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     box-shadow: var(--paper-shadow);
-    /* background-color: #dcd5ca; */
+    background-color: #dcd5ca;
     border-bottom: var(--paper-border);
     transition: box-shadow 0.5s linear,
                 border-bottom 0.5s linear;
@@ -160,7 +160,7 @@ body {
     color: var(--text-color);
     font-weight: 100;
     padding-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     transition: color 0.5s linear;
 }
 
@@ -232,6 +232,13 @@ body {
     color: var(--navbar-text-color);
     text-decoration: underline;
 }
+
+
+.sketch-container {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+  }
 
 /* for contact list*/
 .glyphicon {
