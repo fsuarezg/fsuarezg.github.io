@@ -11,6 +11,7 @@ body {
     --text-color: #2A363B;
     --text-color-light: #46575e;
     --background-color: #2A363B;
+    --pagetitle-shadow: None;
     --paper-texture: url("images_resources/paper_texture.jpg");
     --paper-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
                     0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -39,6 +40,7 @@ body {
 .dark-mode{
     --text-color: #21222a;
     --text-color-light: #46575e;
+    --pagetitle-shadow: 0px -1px 0.5px #b19974;
     --background-color: #21222a;
     --paper-texture: url("images_resources/paper_texture_dark.jpg");
     --paper-shadow: 0em 50px 100px -5px rgba(254, 238, 190, 0.3),
@@ -158,10 +160,12 @@ body {
 
 .pageTitle {
     color: var(--text-color);
+    text-shadow: var(--pagetitle-shadow);
     font-weight: 100;
     padding-top: 1em;
     padding-bottom: 1em;
-    transition: color 0.5s linear;
+    transition: color 0.5s linear,
+                text-shadow 0.5s linear;
 }
 
 /* navigation bar */
