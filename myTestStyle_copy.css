@@ -376,7 +376,7 @@ to {
   }
 
 /* for download button */
-.glyphicon.glyphicon-file {
+.bi-file-earmark-person {
     padding-top: 1rem;
     padding-bottom: 2rem;
     font-size: 75px;
@@ -407,7 +407,7 @@ a:focus {
     border-radius: 3px;
     background: var(--postit-background);
     margin-bottom: 40px;
-    padding: 15px 25px 0 40px;
+    padding: 15px 20px 0 20px;
     color: var(--postit-text-color);
     box-shadow: var(--postit-shadow);
     font-family: "Permanent Marker", cursive;
