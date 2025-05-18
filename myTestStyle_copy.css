@@ -82,9 +82,7 @@ body {
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
     box-shadow: var(--paper-shadow);
-    background-color: #dcd5ca;
-    /* background-image: var(--paper-texture); */
-    /* background-size: cover;  */
+    /* background-color: #dcd5ca; */
     border-bottom: var(--paper-border);
     transition: box-shadow 0.5s linear,
                 border-bottom 0.5s linear;
@@ -98,25 +96,21 @@ body {
     bottom: 0px;
     left: 0px;
     opacity: var(--paper-opacity);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 .container-fluid:before {
     background-image: url(images_resources/paper_texture.jpg);
-    z-index: 1;
+    z-index: -1;
     transition: opacity 0.5s linear;
 }
 
 .container-fluid:after {
     background-image: url(images_resources/paper_texture_dark.jpg);
+    z-index: -2;
     opacity: 1;
 }
 
-/*position pages background differently so pages don't look the same*/
-/* .container-fluid:nth-of-type(even){
-    background-position: top; 
-}
-.container-fluid:nth-of-type(odd){
-    background-position: bottom; 
-} */
 /* overlap and order containers*/
 #About{
     /* background-image: url("images_resources/sketch_01.png"), var(--paper-texture); */
