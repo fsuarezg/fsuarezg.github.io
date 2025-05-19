@@ -469,7 +469,10 @@ a:focus {
     width: 2em;
     height: 1em;
     background-image: radial-gradient(#aeaeae, #646464 );
-    border-top: 2px solid #221c18;
+    border-top: var(--leather-border);
+    /* border-top: 2px solid #221c18; */
+    transition: background-image 0.5s linear,
+                border-top 0.5s linear;
 
     .toggle-checkbox:checked + & {
         background-image: radial-gradient(#d4a867, #a16d4a );
