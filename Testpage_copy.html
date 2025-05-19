@@ -57,7 +57,7 @@
             </div>
             <div class="horizontalContainer">
                 <div class="intermediateContainer" style="padding-right: 4em;"> 
-                    <img id="IdImg" src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle">
+                    <img id="ImgId" src="images_resources/ID_Photo_01.jpg" class="imageCircle" alt="ID image" align="middle">
                     <div style="padding: 0.5em;"></div>
                     <div class="frostedGlass" style="padding-right: 1em; padding-left: 1em;">
                         <h2 class="nameHeader">Fernando<b><b>SuárezGroen</b></b></h2>
@@ -119,6 +119,9 @@
 
 <div id="Contact" class="container-fluid" align="center">
     <h1 class="pageTitle">Contact</h1>
+    <div class="sketch-container" align="center" style="top: 3em;">
+        <img id="ImgFish" src="images_resources/fish.png" width=90% align="middle">
+    </div>
     <div class="contactcontainer" align="left">
         <div class="frostedGlass">
             <ul class="contactlist details" style="font-size: 80%">
@@ -181,7 +184,9 @@
     });
 
     const themeToggle = document.getElementById("ThemeToggle");
-    const defaultImg = document.getElementById("IdImg");
+    const img_id = document.getElementById("ImgId");
+    const img_fish = document.getElementById("ImgFish");
+    
     const body = document.body;
 
     // Check for saved theme preference in localStorage
@@ -197,10 +202,12 @@
     // Apply correct image on page load
     if (currentTheme === "light-mode") {
         themeToggle.checked=0;
-        defaultImg.src = "images_resources/ID_Photo_01.jpg";
+        img_id.src = "images_resources/ID_Photo_01.jpg";
+        img_fish.src= "images_resources/fish.png";
     } else {
         themeToggle.checked=1;
-        defaultImg.src = "images_resources/ID_Photo_01_dark.jpg";
+        img_id.src = "images_resources/ID_Photo_01_dark.jpg";
+        img_fish.src= "images_resources/fish_dark.png";
     }
 
     function toggleTheme() {
@@ -209,12 +216,14 @@
             if (body.classList.contains("light-mode")) {
                 body.classList.remove("light-mode");
                 body.classList.add("dark-mode");
-                defaultImg.src = "images_resources/ID_Photo_01_dark.jpg";
+                img_id.src = "images_resources/ID_Photo_01_dark.jpg";
+                img_fish.src= "images_resources/fish_dark.png";
                 localStorage.setItem("theme", "dark-mode");
             } else {
                 body.classList.remove("dark-mode");
                 body.classList.add("light-mode");
-                defaultImg.src = "images_resources/ID_Photo_01.jpg";
+                img_id.src = "images_resources/ID_Photo_01.jpg";
+                img_fish.src= "images_resources/fish.png";
                 localStorage.setItem("theme", "light-mode");
             }
         }, 500); // Small delay to enable transition

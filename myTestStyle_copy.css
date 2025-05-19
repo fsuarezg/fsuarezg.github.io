@@ -115,17 +115,9 @@ body {
 
 /* overlap and order containers*/
 #About{
-    /* background-image: url("images_resources/sketch_01.png"), var(--paper-texture); */
-    /* background-position: right bottom, top;
-    background-repeat: no-repeat, repeat;
-    background-size: 35%, cover;  */
     z-index: 5;
 }
 #Resume{
-    /* background-image:  url("images_resources/sketch_02.png"), var(--paper-texture); */
-    /* background-position: left bottom, bottom;
-    background-repeat: no-repeat, repeat;
-    background-size: 37%, cover; */
     top: -50px; 
     z-index: 4;
 }
@@ -134,9 +126,9 @@ body {
     z-index: 3;
 }
 #Contact{
-    /* background-image:  var(--fishes-image), var(--paper-texture); */
-    /* background-position: bottom, bottom;
-    background-repeat: no-repeat, repeat;
+    /* background-image:  var(--fishes-image);
+    background-position: bottom;
+    background-repeat: no-repeat;
     background-size: 90%, cover; */
     top: -150px;
     z-index: 2;
