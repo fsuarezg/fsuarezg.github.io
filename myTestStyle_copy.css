@@ -393,7 +393,9 @@ a:focus {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-style: normal;
+    text-decoration: none;
     transition: background 200ms ease-in-out,
+                color 0.5s linear,
                 box-shadow 0.5s linear;
   }
   
