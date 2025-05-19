@@ -126,10 +126,6 @@ body {
     z-index: 3;
 }
 #Contact{
-    /* background-image:  var(--fishes-image);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 90%, cover; */
     top: -150px;
     z-index: 2;
 }
