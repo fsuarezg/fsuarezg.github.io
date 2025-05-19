@@ -3,9 +3,9 @@ body {
     background-color: var(--background-color);
 }
 
-/* :root{
-    transition: all 0.5s linear;
-} */
+:root{
+    --transition-speed: 0.5s;
+}
 
 .light-mode{
     --text-color: #2A363B;
@@ -34,7 +34,7 @@ body {
     --frosted-glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);   
     --frosted-glass-border: 1.5px solid rgba(149, 149, 149, 0.5);    
     --fishes-image: url("images_resources/fish.png");
-    transition: all 0.5s linear;
+    transition: all var(--transition-speed) linear;
 }
 
 .dark-mode{
@@ -70,7 +70,7 @@ body {
     --frosted-glass-shadow: 0em 0em 3em 0em rgb(166, 116, 60, 0.5);
     --frosted-glass-border: 1.5px solid rgba(199, 146, 85, 0.5);
     --fishes-image: url("images_resources/fish_dark.png");
-    transition: all 0.5s linear;
+    transition: all var(--transition-speed) linear;
 }
 
 
@@ -86,8 +86,8 @@ body {
     box-shadow: var(--paper-shadow);
     background-color: #dcd5ca;
     border-bottom: var(--paper-border);
-    transition: box-shadow 0.5s linear,
-                border-bottom 0.5s linear;
+    transition: box-shadow var(--transition-speed) linear,
+                border-bottom var(--transition-speed) linear;
 }
 
 .container-fluid:before, .container-fluid:after {
@@ -104,7 +104,7 @@ body {
 .container-fluid:before {
     background-image: url(images_resources/paper_texture.jpg);
     z-index: -1;
-    transition: opacity 0.5s linear;
+    transition: opacity var(--transition-speed) linear;
 }
 
 .container-fluid:after {
@@ -136,14 +136,14 @@ body {
     width: 180px;
     height: 180px;
     box-shadow: var(--id-shadow);
-    transition: border-top 0.5s linear,
-                box-shadow 0.5s linear;
+    transition: border-top var(--transition-speed) linear,
+                box-shadow var(--transition-speed) linear;
 }
 
 .nameHeader {
     color: var(--text-color);
     font-weight: 100;
-    transition: color 0.5s linear;
+    transition: color var(--transition-speed) linear;
 }
 
 .pageTitle {
@@ -152,8 +152,8 @@ body {
     font-weight: 100;
     padding-top: 1em;
     padding-bottom: 1em;
-    transition: color 0.5s linear,
-                text-shadow 0.5s linear;
+    transition: color var(--transition-speed) linear,
+                text-shadow var(--transition-speed) linear;
 }
 
 /* navigation bar */
@@ -173,8 +173,8 @@ body {
     border-bottom-left-radius: 25px;
     box-shadow: var(--leather-shadow);
     border-bottom: var(--leather-border);
-    transition: box-shadow 0.5s linear,
-                border-bottom 0.5s linear;
+    transition: box-shadow var(--transition-speed) linear,
+                border-bottom var(--transition-speed) linear;
 }
 
 .mynavbarStitch {
@@ -205,8 +205,8 @@ body {
     background-color: transparent;
     border-bottom: .25rem solid transparent;
     text-underline-offset: 8px;
-    transition: color 0.5s linear,
-                text-shadow 0.5s linear;
+    transition: color var(--transition-speed) linear,
+                text-shadow var(--transition-speed) linear;
 }
 
 .nav-link:hover {
@@ -246,7 +246,7 @@ body {
 li {
     margin-bottom:10px;
     color: var(--text-color);
-    transition: color 0.5s linear;
+    transition: color var(--transition-speed) linear;
 }
 
 /* for linkedin link*/
@@ -280,7 +280,7 @@ li {
     width: 2px;
     height: 300px;
     background-color: var(--text-color);
-    transition: background-color 0.5s linear;
+    transition: background-color var(--transition-speed) linear;
 }
 
 .leftContainer ul {
@@ -361,7 +361,7 @@ to {
     padding-bottom: 2rem;
     font-size: 75px;
     color: var(--postit-text-color);
-    transition: color 0.5s linear;
+    transition: color var(--transition-speed) linear;
 }
 
 a:hover {
@@ -395,8 +395,8 @@ a:focus {
     font-style: normal;
     text-decoration: none;
     transition: background 200ms ease-in-out,
-                color 0.5s linear,
-                box-shadow 0.5s linear;
+                color var(--transition-speed) linear,
+                box-shadow var(--transition-speed) linear;
   }
   
 .shadow {
@@ -433,9 +433,9 @@ a:focus {
     -webkit-backdrop-filter: blur(2px);
     padding: 1.2em;
     border-bottom: var(--frosted-glass-border);
-    transition: background 0.5s linear,
-                box-shadow 0.5s linear,
-                border-bottom 0.5s linear;
+    transition: background var(--transition-speed) linear,
+                box-shadow var(--transition-speed) linear,
+                border-bottom var(--transition-speed) linear;
 } 
 
 /* Toggle */
@@ -471,8 +471,8 @@ a:focus {
     background-image: radial-gradient(#aeaeae, #646464 );
     border-top: var(--leather-border);
     /* border-top: 2px solid #221c18; */
-    transition: background-image 0.5s linear,
-                border-top 0.5s linear;
+    transition: background-image var(--transition-speed) linear,
+                border-top var(--transition-speed) linear;
 
     .toggle-checkbox:checked + & {
         background-image: radial-gradient(#d4a867, #a16d4a );
