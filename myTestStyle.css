@@ -166,15 +166,39 @@ body {
     justify-content: center; 
     align-items: center;
 
-    background-color: #4b352a;
-    background: var(--leather-texture);
-    background-size: 150%;
+    /* background-color: #4b352a; */
+    /* background: var(--leather-texture); */
+    /* background-size: 150%; */
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
     box-shadow: var(--leather-shadow);
     border-bottom: var(--leather-border);
     transition: box-shadow var(--transition-speed) linear,
                 border-bottom var(--transition-speed) linear;
+}
+
+.mynavbar:before, .mynavbar:after {
+    content: "";
+    position: absolute;
+    background-size: 150%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: var(--paper-opacity);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.mynavbar:before {
+    background-image: url(images_resources/leather.jpg);
+    z-index: -1;
+    transition: opacity var(--transition-speed) linear;
+}
+
+.mynavbar:after {
+    background-image: url(images_resources/leather_dark.jpg);
+    z-index: -2;
+    opacity: 1;
 }
 
 .mynavbarStitch {
