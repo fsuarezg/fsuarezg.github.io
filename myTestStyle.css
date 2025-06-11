@@ -253,8 +253,7 @@ body {
 .sketch-container {
     display: inline-block;
     position: absolute;
-    right: 0px;
-  }
+}
 
 /* for contact list*/
 .contactcontainer {
