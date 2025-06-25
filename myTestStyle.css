@@ -113,6 +113,11 @@ body {
     opacity: 1;
 }
 
+.container {
+    flex: 1 1 auto;
+    overflow: hidden; /* keeps content tidy */
+}
+
 /* overlap and order containers*/
 #About{
     z-index: 5;
@@ -124,6 +129,8 @@ body {
 #Portfolio{
     top: -100px;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
 }
 #Contact{
     top: -150px;
@@ -522,10 +529,30 @@ a:focus {
 
 
 /*Carousel*/
-.carousel-indicators {
-    bottom: -2em;
+.carousel {
+    height: 100%;
+    width: 100%;
 }
-/* .carousel-indicators li {
-    background-color: #ccc;
-} */
+
+.carousel-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+.video-wrapper iframe {
+    position: relative;
+}
 

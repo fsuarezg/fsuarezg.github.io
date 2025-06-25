@@ -112,9 +112,8 @@
 
 <div id="Portfolio" class="container-fluid" align="center">
     <h1 class="pageTitle">Portfolio</h1>
-
     <div class="container">
-        <div id="carousel_portfolio" class="carousel slide carousel-dark">
+        <div id="carousel_portfolio" class="carousel slide carousel-dark" ho>
             <ol class="carousel-indicators indicator">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel_portfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -123,14 +122,24 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <video width=40% height=40% controls>
-                        <source src="videos/portfolio_usd_turntables.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-wrapper">
+                        <iframe src="https://player.vimeo.com/video/1096343137?h=0b8209593c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                                style="height:90%; width:90%"
+                                title="portfolio_usd_turntables"
+                                ></iframe>
+                        </div>
+                        <script src="https://player.vimeo.com/api/player.js">
+                        </script>
                 </div>
                 <div class="carousel-item">
-                    <video width=71% height=71% controls>
-                        <source src="videos/portfolio_vr_rendering_720p.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-wrapper">
+                        <iframe src="https://player.vimeo.com/video/1096346025?h=2797aeab42&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                            style="height:90%; width:90%"
+                            title="portfolio_vr_rendering_1080p"></iframe>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel_portfolio" data-bs-slide="prev">
