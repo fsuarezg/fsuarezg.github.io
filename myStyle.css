@@ -519,3 +519,13 @@ a:focus {
         left: 1.12em;
     }
 }
+
+
+/*Carousel*/
+.carousel-indicators {
+    bottom: -2em;
+}
+/* .carousel-indicators li {
+    background-color: #ccc;
+} */
+
