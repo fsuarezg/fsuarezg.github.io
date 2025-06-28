@@ -113,11 +113,11 @@
 <div id="Portfolio" class="container-fluid" align="center">
     <h1 class="pageTitle">Portfolio</h1>
     <div class="container">
-        <div id="carousel_portfolio" class="carousel slide carousel-dark" ho>
+        <div id="CarouselPortfolio" class="carousel slide carousel-dark" ho>
             <ol class="carousel-indicators indicator">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel_portfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel_portfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#CarouselPortfolio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#CarouselPortfolio" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 </div>
             </ol>
             <div class="carousel-inner">
@@ -142,11 +142,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_portfolio" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#CarouselPortfolio" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel_portfolio" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#CarouselPortfolio" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -228,6 +228,7 @@
     const themeToggle = document.getElementById("ThemeToggle");
     const img_id = document.getElementById("ImgId");
     const img_fish = document.getElementById("ImgFish");
+    const portfolio = document.getElementById("CarouselPortfolio");
     
     const body = document.body;
 
@@ -246,10 +247,12 @@
         themeToggle.checked=0;
         img_id.src = "images_resources/ID_Photo_01.jpg";
         img_fish.src= "images_resources/fish.png";
+        portfolio.classList.add("carousel-dark");
     } else {
         themeToggle.checked=1;
         img_id.src = "images_resources/ID_Photo_01_dark.jpg";
         img_fish.src= "images_resources/fish_dark.png";
+        portfolio.classList.remove("carousel-dark");
     }
 
     function toggleTheme() {
@@ -261,12 +264,14 @@
                 img_id.src = "images_resources/ID_Photo_01_dark.jpg";
                 img_fish.src= "images_resources/fish_dark.png";
                 localStorage.setItem("theme", "dark-mode");
+                portfolio.classList.remove("carousel-dark");
             } else {
                 body.classList.remove("dark-mode");
                 body.classList.add("light-mode");
                 img_id.src = "images_resources/ID_Photo_01.jpg";
                 img_fish.src= "images_resources/fish.png";
                 localStorage.setItem("theme", "light-mode");
+                portfolio.classList.add("carousel-dark");
             }
         }, 500); // Small delay to enable transition
     }
